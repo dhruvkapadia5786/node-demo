@@ -9,7 +9,15 @@ const mongoose = require('mongoose');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
+
+
+const corsOptions = {
+    // origin: '*',
+    origin: 'https://delicate-jelly-f7f578.netlify.app/',
+    optionsSuccessStatus: 200,
+  };
+  app.use(cors());
+//   app.use(cors(corsOptions));
 
 // Connect to MongoDB 
 connectDB();
