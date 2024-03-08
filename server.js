@@ -16,8 +16,13 @@ connectDB();
 // API routes with the specified base URL
 const baseURL = process.env.API_URL || 'http://localhost:8000';
 
-app.post(`${baseURL}/api/users`, userController.createUser);
-app.get(`${baseURL}/api/users`, userController.getUsers);
+// app.post(`${baseURL}/api/users`, userController.createUser);
+// app.get(`${baseURL}/api/users`, userController.getUsers);
+
+
+app.post(`https://node-demo-blush.vercel.app/api/users`, userController.createUser);
+app.get(`https://node-demo-blush.vercel.app/api/users`, userController.getUsers);
+
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
