@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // API to post user data to the database
-app.post('/api/users', async (req, res) => {
+app.post('https://node-demo-0zx9.onrender.com/api/users', async (req, res) => {
   try {
     const newUser = new User(req.body);
     const savedUser = await newUser.save();
@@ -40,7 +40,7 @@ app.post('/api/users', async (req, res) => {
   }
 });
 
-app.get('/api/users', async (req, res) => {
+app.get('https://node-demo-0zx9.onrender.com/api/users', async (req, res) => {
     try {
       const users = await User.find();
       res.json(users);
