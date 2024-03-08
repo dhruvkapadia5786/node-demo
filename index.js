@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 
 const corsOptions = {
-    origin: '*',
+    // origin: '*',
     origin: 'https://delicate-jelly-f7f578.netlify.app/',
     optionsSuccessStatus: 200,
   };
