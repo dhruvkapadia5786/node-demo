@@ -1,7 +1,20 @@
 {
-    "version":2,
-    "name": "task",
-    "builds": [{"src":"server.js", "use":"@vercel/node"}],
-    "routes": [{"src":"/(.*)", "dest": "/server.js"}]
-
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/users",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "PORT": "3001",
+    "MONGODB_URI": "mongodb+srv://dhruvkapadia786:t7H4BePohOScdDEM@authorise.wu1qx6v.mongodb.net/",
+    "API_URL": "https://node-demo-blush.vercel.app"
+  }
 }

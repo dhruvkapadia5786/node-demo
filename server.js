@@ -14,7 +14,7 @@ app.use(cors({ origin: '*' }));
 connectDB();
 
 // API routes with the specified base URL
-const baseURL = process.env.API_URL || 'http://localhost:8000';
+const baseURL = process.env.API_URL;
 
 // app.post(`${baseURL}/api/users`, userController.createUser);
 // app.get(`${baseURL}/api/users`, userController.getUsers);
